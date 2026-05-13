@@ -1,0 +1,25 @@
+# Chrome profile (contains login cookies - sensitive)
+chrome_profile/
+
+# Playwright debug artifacts
+.playwright-cli/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Bot runtime temp files
+MAXBOT_*.txt
+
+# Downloaded chromedriver
+webdriver/chromedriver.exe
+
+# Extension runtime state
+webdriver/Maxbotplus_1.0.0/data/status.json
+webdriver/Maxbotplus_1.0.0/data/settings.json
+webdriver/Maxblockplus_1.0.0/data/settings.json
+
+# User config (contains tixcraft_sid credential)
+settings.json
+config_launcher.json
