@@ -78,6 +78,7 @@
             "run_at": "document_end",
             "js": [
                 "jquery.min.js",
+                "js/checkbox.js",
                 "js/common.js",
                 "js/tixcraft_game.js"
             ]

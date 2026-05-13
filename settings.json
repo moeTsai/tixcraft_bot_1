@@ -1,8 +1,8 @@
 {
-    "homepage": "https://tixcraft.com",
+    "homepage": "https://tixcraft.com/activity/detail/26_nmixx",
     "browser": "chrome",
     "language": "\u7e41\u9ad4\u4e2d\u6587",
-    "ticket_number": 2,
+    "ticket_number": 1,
     "ocr_captcha": {
         "enable": true,
         "beta": true,
@@ -18,7 +18,7 @@
     "area_auto_select": {
         "enable": true,
         "mode": "random",
-        "area_keyword": ""
+        "area_keyword": "\"6880\""
     },
     "keyword_exclude": "\"\u8f2a\u6905\",\"\u8eab\u969c\",\"\u8eab\u5fc3 \u969c\u7919\",\"Restricted View\",\"\u71c8\u67f1\u906e\u853d\",\"\u8996\u7dda\u4e0d\u5b8c\u6574\"",
     "kktix": {
@@ -35,7 +35,7 @@
             "order": true,
             "filename": "ding-dong.wav"
         },
-        "tixcraft_sid": "",
+        "tixcraft_sid": "g.a0009wgOIQw_BM7PqGNMgnCrVbnz_7GTl3A_LiY0bJpk1kJs5StkJIJVw1bVHU-F0n7qo10MIQACgYKAbASARUSFQHGX2MihPg37b3NUBrTtg4biQGnMhoVAUF8yKqhXxqAuIxqThJGqayR3dhD0076",
         "ibonqware": "",
         "facebook_account": "",
         "kktix_account": "",
@@ -76,7 +76,7 @@
         "auto_guess_options": true,
         "user_guess_string": "",
         "remote_url": "\"http://127.0.0.1:16888/\"",
-        "auto_reload_page_interval": 0.0,
+        "auto_reload_page_interval": 2.5,
         "reset_browser_interval": 0,
         "kktix_status_api": false,
         "max_dwell_time": 60,

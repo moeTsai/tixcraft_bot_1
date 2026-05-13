@@ -304,6 +304,9 @@ def get_chrome_options(webdriver_path, config_dict):
     chrome_options.add_argument("--no-service-autorun")
     chrome_options.add_argument("--password-store=basic")
 
+    user_data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chrome_profile")
+    chrome_options.add_argument("--user-data-dir=" + user_data_dir)
+
     # for navigator.webdriver
     chrome_options.add_experimental_option("excludeSwitches", ['enable-automation'])
     # Deprecated chrome option is ignored: useAutomationExtension
@@ -471,6 +474,10 @@ def get_uc_options(uc, config_dict, webdriver_path):
     options.add_argument("--no-sandbox")
     options.add_argument("--no-service-autorun")
     options.add_argument("--password-store=basic")
+
+    user_data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "chrome_profile")
+    options.add_argument("--user-data-dir=" + user_data_dir)
+
     options.add_experimental_option("prefs", CONST_PREFS_DICT)
 
     if len(config_dict["advanced"]["proxy_server_port"]) > 2:
@@ -847,6 +854,8 @@ def get_driver_by_config(config_dict):
                 if len(tixcraft_sid) > 1:
                     driver.delete_cookie("SID")
                     driver.add_cookie({"name":"SID", "value": tixcraft_sid, "path" : "/", "secure":True})
+                    driver.refresh()
+                    time.sleep(1.0)
 
             if 'ibon.com' in homepage:
                 ibonqware = config_dict["advanced"]["ibonqware"]
@@ -2345,16 +2354,7 @@ def tixcraft_assign_ticket_number(driver, config_dict):
 
 
 def tixcraft_ticket_main(driver, config_dict, ocr, Captcha_Browser, domain_name):
-    is_agree_at_webdriver = False
-    if not config_dict["browser"] in CONST_CHROME_FAMILY:
-        is_agree_at_webdriver = True
-    else:
-        if not config_dict["advanced"]["chrome_extension"]:
-            is_agree_at_webdriver = True
-    if is_agree_at_webdriver:
-        # use extension instead of selenium.
-        # checkbox javascrit code at chrome extension.
-        tixcraft_ticket_main_agree(driver, config_dict)
+    tixcraft_ticket_main_agree(driver, config_dict)
 
     is_ticket_number_assigned = False
 
