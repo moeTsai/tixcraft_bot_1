@@ -1212,6 +1212,8 @@ def tixcraft_date_auto_select(driver, url, config_dict, domain_name):
                 driver.refresh()
             except Exception as exc:
                 pass
+            if config_dict["advanced"]["auto_reload_page_interval"] > 0:
+                time.sleep(config_dict["advanced"]["auto_reload_page_interval"])
         else:
             if not is_date_clicked:
                 if not formated_area_list is None:
