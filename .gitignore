@@ -11,6 +11,7 @@ __pycache__/
 
 # Bot runtime temp files
 MAXBOT_*.txt
+MAXBOT_*.7z
 
 # Downloaded chromedriver
 webdriver/chromedriver.exe
